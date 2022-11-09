@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+using namespace std; 
+
+//logic is, if i is odd then we go top to bottom if i is even we go bottom to top//
+
+void wave_print(int arr[] [3], int rows, int columns) {
+
+   int n=0;
+   for (int j=0; j<columns; j++) {
+
+      if (n%2==1) {
+
+         for (int i=rows-1; i>0; i--) {
+
+            cout << arr[i] [j] << " ";
+         }
+      }
+
+      else{
+
+         for (int i=0; i<rows; i++) {
+            cout << arr[i] [j] << " ";
+         }
+      }
+      n++;
+
+   }
+}
+
+int main() {
+
+   int arr [3] [3]={1,2,3,4,5,6,7,8,9};
+   wave_print(arr,3,3);
+
+}
+
